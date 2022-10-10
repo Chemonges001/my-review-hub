@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
-  resources :users
-  resources :cocktails
+  resources :users, only: [:index, :show :create]
+  resources :cocktails, only: [:index, :show :create]
   resources :reviews
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
