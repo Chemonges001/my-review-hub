@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   
-  resources :cocktails, only: [:index, :show :create]
+  resources :cocktails, only: [:index, :show, :create]
   resources :reviews
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
