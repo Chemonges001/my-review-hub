@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   
   resources :cocktails, only: [:index, :show, :create]
   resources :reviews
+  resources :users, only: [:index, :show, :create]
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
   post "/login", to: "sessions#create"

@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
- u1 = User.create(name: "Oscar Kiprop", user_name: "The Legend" )
+ u1 = User.create(name: "Oscar Kiprop", user_name: "The Legend"  )
  u2 = User.create(name: "Amos Koech", user_name: "Spiderman" )
 
  c1 = Cocktail.create(name: "Margarita", image: "Looks so good")
