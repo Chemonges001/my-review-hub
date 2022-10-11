@@ -7,6 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
  u1 = User.create(name: "Oscar Kiprop", user_name: "The Legend" )
  u2 = User.create(name: "Amos Koech", user_name: "Spiderman" )
- u3 = User.create(name: "Susan Kamau", user_name: "Maya" )
- u4 = User.create(name: "Tracey Lung'ahi", user_name: "Thiccky" )
- u4 = User.create(name: "Titus Ouko", user_name: "Batman" )
+
+ c1 = Cocktail.create(name: "Margarita", image: "Looks so good")
+ c2 = Cocktail.create(name: "Cockatail db", image: "exciting")
+ c3 = Cockatail.create(name: "Blue Margarita", image: "Amazing")
+
+ r1 = Review.create(description: "Good Looking", rating: 5, user_id: 1, cocktail_id 1)
+ r2 = Review.create(description: "Amzing Taste", rating: 3, user_id: 1, cocktail_id 2)
+ r1 = Review.create(description: "Excellent", rating: 4, user_id: 2, cocktail_id 1)
+ 
