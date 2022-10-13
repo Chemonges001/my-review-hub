@@ -1,4 +1,6 @@
 class Cocktail < ApplicationRecord
-    has_many :reviews, dependent: :destroy
-    has_many :users, through: :reviews
+    belongs_to :user
+    
+    validates :name, presence: true
+    validates :description, length: {minimum: 50}
 end

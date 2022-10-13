@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import NavBar from './components/NavBar';
 import Login from './components/Login';
 import { Routes, Route } from "react-router-dom";
-import AddCockTail from './components/AddCockTail'
 
 function App() {
   const [user, setUser] = useState(null);
@@ -20,7 +19,6 @@ function App() {
   return (
     <div>
       <NavBar user={user} setUser={setUser} />
-      <AddCockTail user={user} />
       <main>
         <Routes>
         <Route>
