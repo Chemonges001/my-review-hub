@@ -11,11 +11,12 @@ function CocktailList({ cocktails, onDeleteCocktail }) {
                 cocktail = {cocktail}
                 onDeleteCocktail = {onDeleteCocktail}
                 />
-             )
+             );
         }
        
         )}
     </ul>
+  )
   
 }
 
