@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { Button, Error, Input, FormField, Label} from "../styles";
+import React, {useState} from 'react'
 
-function SignUpForm({ onLogin }) {
+
+function SignUpForm({onLogin}) {
   const [name, setName] = useState("");
-  const [username, setUsername] = useState("");
+  const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [errors, setErrors] = useState([]);
@@ -13,81 +13,82 @@ function SignUpForm({ onLogin }) {
     e.preventDefault();
     setErrors([]);
     setIsLoading(true);
-    fetch("/signup", {
+    // eslint-disable-next-line
+    fetch('/signup', {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type" : "application/json",
       },
       body: JSON.stringify({
-        name,
-        user_name:username,
-        password,
-        password_confirmation: passwordConfirmation,
-      }),
-    }).then((r) => {
-      setIsLoading(false);
-      if (r.ok) {
-        r.json().then((user) => onLogin(user));
-      } else {
-        r.json().then((err) => setErrors(err.errors));
+          name, 
+          user_name: userName,
+          password,
+          password_confirmation: passwordConfirmation
+
+        }),
+    }). then((r) => {
+      setIsLoading(false)
+      if(r.ok){
+        r.json().then((user) => onLogin(user))
       }
+        else {
+          r.json().then((err) => setErrors(err.errors));
+        }
     });
   }
-
   return (
-    <form onSubmit={handleSubmit}>
-      <FormField>
-        <Label htmlFor="name">Name</Label>
-        <input
-        type="test"
-        id="name"
-        autoComplete="off"
-        value ={name}
-        onChange = {(e) => setName(e.target.value)}
-        />
-      </FormField>
+    <form onSubmit ={handleSubmit}>
+      <div>
+      <label>Name</label>
+      <input
+       type="text"
+       autoComplete="off"
+       value={name}
+       onChange={(e) => setName(e.target.value)}
+      />
 
-      <FormField>
-        <Label htmlFor="username">Username</Label>
-        <Input
-          type="text"
-          id="user_name"
-          autoComplete="off"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-      </FormField>
-      <FormField>
-        <Label htmlFor="password">Password</Label>
-        <Input
-          type="password"
-          id="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          autoComplete="current-password"
-        />
-      </FormField>
-      <FormField>
-        <Label htmlFor="password">Password Confirmation</Label>
-        <Input
-          type="password"
-          id="password_confirmation"
-          value={passwordConfirmation}
-          onChange={(e) => setPasswordConfirmation(e.target.value)}
-          autoComplete="current-password"
-        />
-      </FormField>
+      </div>
 
-      <FormField>
-        <Button type="submit">{isLoading ? "Loading..." : "Sign Up"}</Button>
-      </FormField>
-      <FormField>
-        {errors.map((err) => (
-          <Error key={err}>{err}</Error>
+      <div>
+      <label>Username</label>
+      <input
+       type="text"
+       autoComplete="off"
+       value={userName}
+       onChange={(e) => setUserName(e.target.value)}
+      />
+      </div>
+    
+      <div>
+      <label>Password</label>
+      <input
+       type="password"
+       value={password}
+       onChange={(e) => setPassword(e.target.value)}
+       autoComplete="current-password"
+      />
+      </div>
+
+      <div>
+      <label>Confirm Password</label>
+      <input
+       type="password"
+       value={passwordConfirmation}
+       onChange={(e) => setPasswordConfirmation(e.target.value)}
+       autoComplete="current-password"
+      />
+      </div>
+      <div>
+        <button type="submit">{isLoading ? "Loading..." : "Sign Up"}</button>
+      </div>
+      <div>
+      {errors.map((err) => (
+          <h3 key={err}>{err}</h3>
         ))}
-      </FormField>
+      </div>
+
     </form>
-  );
+  )
 }
 
-export default SignUpForm;
+export default SignUpForm
