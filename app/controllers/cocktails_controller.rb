@@ -13,7 +13,7 @@ class CocktailsController < ApplicationController
         render json: cocktail, status: :created
     end
 
-    def create 
+    def destroy
         cocktail = Cocktail.find(params[:id])
         cocktail.destroy
         head :no_content
@@ -21,6 +21,6 @@ class CocktailsController < ApplicationController
 
     private
     def cocktail_params
-        params.permit(:name, :image)
+        params.permit(:name, :image, :description)
     end
 end
