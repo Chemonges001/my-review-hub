@@ -1,7 +1,7 @@
 import React from 'react';
 import CockTailCard from './CockTailCard.Js';
 
-function CocktailList({ cocktails, onDeleteCocktail }) {
+function CockTailList({ cocktails, onDeleteCocktail }) {
   return (
     <ul>
         {cocktails.map((cocktail) => {
@@ -20,4 +20,4 @@ function CocktailList({ cocktails, onDeleteCocktail }) {
   
 }
 
-export default CocktailList
+export default CockTailList
