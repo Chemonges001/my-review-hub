@@ -1,7 +1,7 @@
 import React from 'react';
 import CocktailCard from './CocktailCard';
 
-function CocktailList({ cocktails, onDeleteCocktail }) {
+function CocktailList({ cocktails, onDeleteCocktail}) {
   return (
     <div className='cocktailcards'>
         {cocktails.map((cocktail) => {
@@ -10,6 +10,7 @@ function CocktailList({ cocktails, onDeleteCocktail }) {
                 key = {cocktail.id}
                 cocktail ={cocktail}
                 onDeleteCocktail = {onDeleteCocktail}
+                
                 />
             );
         })}
