@@ -6,8 +6,105 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.cards {
+  list-style: none;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.card {
+  margin: 1rem;
+}
+.card img {
+  width: 100%;
+}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card button {
+  margin-top: 0.5rem;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px 10px;
+  margin: 1px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+}
+
+img{
+  width: 100%;
+  max-height: 100%;
+  display: block; /* remove extra space below image */
+}
+
+.formcomponent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: solid;
+  width: 382px;  
+  overflow: hidden;  
+  margin: auto;  
+  margin: 20 0 0 450px;  
+  padding: 80px;  
+  background: #23463f;  
+  border-radius: 15px ;  
+  font-size: large;
+}
+
+label{  
+  color: #08ffd1;  
+  font-size: 17px;  
+  /* margin-right: 20px;
+  display: block; */
+}  
+
+input{
+  /* margin-left: 20px;
+  display: block; */
+}
+
+.login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card img{
+  width: 200px;
+  height: 500px; 
+  border-radius: 25px; 
+  max-width: 100%;
+  height: auto;
+  border: 5px #Ff67;
+}
+
+.navbar{
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+  width: 100%;
+  list-style-type: none;
+}
+.addcocktail{
+  align-items: center;
+  text-align: center;
+}
+
+h2{  
+  /* text-align: center;   */
+  color: #277582;  
+  padding: 20px;  
+}  
+.inputlable{
+  margin-right: 20px;
+  display: block;
+
 }

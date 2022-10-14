@@ -5,14 +5,14 @@ import LoginForm from './LoginForm';
 function Login({ onLogin }) {
     const [showLogin, setShowLogin] = useState(true);
   return (
-    <div>
+    <div className='login'>
         <h2>The Cocktail Hub</h2>
         {showLogin ? (
         <>
         <LoginForm onLogin={onLogin} />
           <p>
             Don't have an account? &nbsp;
-            <button color="secondary" onClick={() => setShowLogin(false)}>
+            <button className='' onClick={() => setShowLogin(false)}>
               Sign Up
             </button>
           </p>

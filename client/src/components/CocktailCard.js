@@ -13,10 +13,10 @@ function CocktailCard({cocktail, onDeleteCocktail}) {
         })
     }
   return (
-    <div>
-        <img src={image} alt ={name}/>
+    <div className='card'>
+        <img className='figure' src={image} alt ={name}/>
         <h2>{name}</h2>
-        <h4>{description}</h4>
+        <p>{description}</p>
 
         <button onClick={handleDeleteCocktail}>Delete</button>
     </div>

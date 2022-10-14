@@ -31,8 +31,8 @@ function NewCocktail({onAddCocktail}) {
       }
 
   return (
-    <div>
-        <h4>Tell US About The Cocktail</h4>
+    <div className='addcocktail'>
+        <h4>Tell Us About The Cocktail</h4>
         <form onSubmit={handleSubmit} >
             <input
               type="text"
@@ -41,13 +41,15 @@ function NewCocktail({onAddCocktail}) {
               value ={name}
               onChange={(e) => setName(e.target.value)}
             />
+            {" "}
              <input
               type="text"
               name ="image"
-              placeholder="Cocktail image"
+              placeholder="Leave Review"
               value ={image}
               onChange={(e) => setImage(e.target.value)}
             />
+            {" "}
              <input
               type="text"
               name ="description"
@@ -55,6 +57,7 @@ function NewCocktail({onAddCocktail}) {
               value ={description}
               onChange={(e) => setDescription(e.target.value)}
             />
+            {" "}
         <button type="submit">Add Cocktail</button>
 
         </form>

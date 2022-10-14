@@ -10,7 +10,9 @@ function NavBar({ user, setUser }) {
   }
 
   return (
-    <div>
+    <div className='navbar'>
+       <button><a href="#home">Home</a></button>
+       <button><a href="#home">Cocktail</a></button>
       <button onClick={handleLogoutClick}>Logout</button>
     </div>
   )

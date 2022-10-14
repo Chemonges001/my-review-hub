@@ -29,9 +29,9 @@ function LoginForm({ onLogin }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='formcomponent' onSubmit={handleSubmit}>
       <div>
-        <label>Username</label>
+        <label className='inputlable'>Username</label>
         <input
           type="text"
           autoComplete="off"
@@ -42,7 +42,7 @@ function LoginForm({ onLogin }) {
       </div>
 
       <div>
-        <label>Password</label>
+        <label className='inputlable'>Password</label>
         <input
         type="password"
         autoComplete="current-password"
@@ -53,7 +53,7 @@ function LoginForm({ onLogin }) {
       </div>
 
       <div>
-        <button type='submit'>{isLoading ? "Loading..." : "Login"}</button>
+        <button className='btn-login' type='submit'>{isLoading ? "Loading..." : "Login"}</button>
       </div>
 
       <div>

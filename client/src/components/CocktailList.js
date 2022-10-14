@@ -3,7 +3,7 @@ import CocktailCard from './CocktailCard';
 
 function CocktailList({ cocktails, onDeleteCocktail }) {
   return (
-    <div>
+    <div className='cocktailcards'>
         {cocktails.map((cocktail) => {
             return (
                 <CocktailCard

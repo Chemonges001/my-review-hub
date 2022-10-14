@@ -37,9 +37,9 @@ function SignUpForm({onLogin}) {
     });
   }
   return (
-    <form onSubmit ={handleSubmit}>
+    <form className='formcomponent' onSubmit ={handleSubmit}>
       <div>
-      <label>Name</label>
+      <label className='inputlable'>Name</label>
       <input
        type="text"
        autoComplete="off"
@@ -50,7 +50,7 @@ function SignUpForm({onLogin}) {
       </div>
 
       <div>
-      <label>Username</label>
+      <label className='inputlable'>Username</label>
       <input
        type="text"
        autoComplete="off"
@@ -60,7 +60,7 @@ function SignUpForm({onLogin}) {
       </div>
     
       <div>
-      <label>Password</label>
+      <label className='inputlable'>Password</label>
       <input
        type="password"
        value={password}
@@ -70,7 +70,7 @@ function SignUpForm({onLogin}) {
       </div>
 
       <div>
-      <label>Confirm Password</label>
+      <label className='inputlable'>Confirm Password</label>
       <input
        type="password"
        value={passwordConfirmation}
