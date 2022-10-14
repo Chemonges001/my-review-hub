@@ -38,9 +38,9 @@ function LoginForm({ onLogin }) {
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
         />
-
+        
       </div>
-
+      {" "}
       <div>
         <label className='inputlable'>Password</label>
         <input
@@ -51,6 +51,7 @@ function LoginForm({ onLogin }) {
         />
 
       </div>
+      {" "}
 
       <div>
         <button className='btn-login' type='submit'>{isLoading ? "Loading..." : "Login"}</button>

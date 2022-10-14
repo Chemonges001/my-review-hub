@@ -11,9 +11,9 @@ function NavBar({ user, setUser }) {
 
   return (
     <div className='navbar'>
-       <button><a href="#home">Home</a></button>
-       <button><a href="#home">Cocktail</a></button>
-      <button onClick={handleLogoutClick}>Logout</button>
+       <button className='navbutton'><a href="#home">Home</a></button>
+       <button className='navbutton'><a href="#home">Cocktail</a></button>
+      <button className='navbutton' onClick={handleLogoutClick}>Logout</button>
     </div>
   )
 }

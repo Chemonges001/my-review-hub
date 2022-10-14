@@ -45,7 +45,7 @@ function NewCocktail({onAddCocktail}) {
              <input
               type="text"
               name ="image"
-              placeholder="Leave Review"
+              placeholder="Image"
               value ={image}
               onChange={(e) => setImage(e.target.value)}
             />
